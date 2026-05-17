@@ -4,7 +4,7 @@
 const DEEPSEEK_API_URL = 'https://api.deepseek.com/chat/completions';
 const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY || 'sk-ccd7985ca2364777af037fed80b07b53';
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   // CORS
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
@@ -18,7 +18,14 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: { message: 'Method not allowed' } });
   }
 
-  const { model, messages, stream, max_tokens, temperature, top_p, thinking, reasoning_effort } = req.body;
+  let body;
+  try {
+    body = typeof req.body === 'string' ? JSON.parse(req.body) : (req.body || {});
+  } catch {
+    return res.status(400).json({ error: { message: 'Invalid JSON' } });
+  }
+
+  const { model, messages, stream, max_tokens, temperature, top_p, thinking, reasoning_effort } = body;
 
   const proxyBody = {
     model: model || 'deepseek-chat',
@@ -53,7 +60,7 @@ export default async function handler(req, res) {
       const reader = response.body.getReader();
       const decoder = new TextDecoder();
 
-      const sendChunk = async () => {
+      try {
         while (true) {
           const { done, value } = await reader.read();
           if (done) {
@@ -63,14 +70,15 @@ export default async function handler(req, res) {
           const text = decoder.decode(value, { stream: true });
           res.write(text);
         }
-      };
-
-      await sendChunk();
+      } catch (streamErr) {
+        res.end();
+      }
     } else {
       const data = await response.json();
       return res.status(200).json(data);
     }
   } catch (error) {
-    return res.status(500).json({ error: { message: '代理服务器内部错误' } });
+    console.error('Proxy error:', error);
+    return res.status(500).json({ error: { message: '代理服务器内部错误: ' + error.message } });
   }
-}
+};
