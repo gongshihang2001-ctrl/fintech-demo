@@ -1,6 +1,7 @@
 // Vercel Serverless Function — AI API 代理
 // 路由: /api/chat/completions
 
+const fetch = require('node-fetch');
 const DEEPSEEK_API_URL = 'https://api.deepseek.com/chat/completions';
 const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY || 'sk-ccd7985ca2364777af037fed80b07b53';
 
@@ -57,22 +58,18 @@ module.exports = async function handler(req, res) {
       res.setHeader('cache-control', 'no-cache');
       res.setHeader('connection', 'keep-alive');
 
-      const reader = response.body.getReader();
-      const decoder = new TextDecoder();
+      response.body.on('data', (chunk) => {
+        res.write(chunk);
+      });
 
-      try {
-        while (true) {
-          const { done, value } = await reader.read();
-          if (done) {
-            res.end();
-            return;
-          }
-          const text = decoder.decode(value, { stream: true });
-          res.write(text);
-        }
-      } catch (streamErr) {
+      response.body.on('end', () => {
         res.end();
-      }
+      });
+
+      response.body.on('error', (err) => {
+        console.error('Stream error:', err);
+        res.end();
+      });
     } else {
       const data = await response.json();
       return res.status(200).json(data);
