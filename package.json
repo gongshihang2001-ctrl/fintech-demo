@@ -1,0 +1,23 @@
+{
+  "name": "cmb-insurance-advisor-demo",
+  "version": "1.0.0",
+  "description": "招行AI保险顾问 Demo — 内嵌App形态的AI对话助手",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "dev:proxy": "node local-proxy.js"
+  },
+  "proxy": "http://localhost:3001",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "react-markdown": "^9.0.1",
+    "lucide-react": "^0.344.0"
+  },
+  "browserslist": {
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
+  }
+}

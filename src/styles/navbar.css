@@ -1,0 +1,115 @@
+/* ========== 顶部导航栏 · 基于截图：白底、彩色AI头像 ========== */
+.navbar {
+  position: relative;
+  z-index: 100;
+  background: var(--bg-white);
+  padding-top: var(--safe-top);
+  border-bottom: 0.5px solid var(--border);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+  padding: 0 8px;
+}
+
+/* 左侧：返回箭头 */
+.navbar-left {
+  flex: 0 0 40px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: #333;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.15s;
+}
+
+.nav-btn:active {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* 中间：AI头像 */
+.navbar-center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 4px;
+}
+
+/* AI渐变头像 - 截图中是蓝粉渐变的机器人圆形 */
+.ai-avatar-nav {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--avatar-gradient);
+  background-size: 200% 200%;
+  animation: gradientShift 6s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.ai-avatar-nav::after {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.ai-avatar-nav-icon {
+  font-size: 20px;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.ai-avatar-nav-svg {
+  position: relative;
+  z-index: 1;
+}
+
+.navbar-title-group {
+  display: none;
+}
+
+/* 右侧：新建会话按钮 */
+.navbar-right {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-new-chat {
+  position: relative;
+}
+
+.nav-new-chat:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.nav-new-chat:active {
+  background: rgba(0, 0, 0, 0.08);
+  transform: scale(0.95);
+}
+
+.navbar-badge {
+  display: none;
+}

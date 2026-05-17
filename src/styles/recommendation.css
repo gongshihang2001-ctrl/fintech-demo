@@ -1,0 +1,280 @@
+/* ========== 推荐卡片 ========== */
+.recommendation-wrapper {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+
+.recommendation-card {
+  flex: 1;
+  background: var(--bg-white);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 0.5px solid var(--border);
+}
+
+/* 卡片头部 */
+.rec-card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 16px 10px;
+  border-bottom: 0.5px solid var(--border-light);
+}
+
+.rec-card-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: var(--r-full);
+  background: linear-gradient(135deg, #3b7fe8, #5b9aff);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.rec-card-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* 卡片内容区 */
+.rec-card-body {
+  padding: 14px 16px 16px;
+}
+
+/* 产品名称 */
+.rec-product-name {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 0.5px dashed var(--border-light);
+}
+
+.rec-product-icon {
+  font-size: 18px;
+}
+
+/* 各段落标题 */
+.rec-section {
+  margin-bottom: 14px;
+}
+
+.rec-section:last-of-type {
+  margin-bottom: 16px;
+}
+
+.rec-section-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.rec-label-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.highlight-dot {
+  background: #FF9800;
+}
+
+.coverage-dot {
+  background: #12B282;
+}
+
+.reason-dot {
+  background: #3b7fe8;
+}
+
+/* 亮点标签 */
+.rec-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.rec-highlight-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: var(--r-full);
+  background: #FFF7ED;
+  color: #E67700;
+  font-size: 12px;
+  font-weight: 500;
+  border: 0.5px solid #FFE0B2;
+}
+
+/* 保障范围列表 */
+.rec-coverage-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.rec-coverage-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.rec-coverage-check {
+  color: #12B282;
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.rec-coverage-text {
+  flex: 1;
+}
+
+/* 推荐理由 */
+.rec-reason {
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  background: #F6F8FC;
+  border-radius: var(--r-sm);
+  padding: 10px 12px;
+  border-left: 3px solid var(--primary-blue);
+}
+
+/* 操作按钮 */
+.rec-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.rec-action-btn {
+  flex: 1;
+  height: 36px;
+  border-radius: var(--r-full);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.rec-btn-detail {
+  background: var(--bg-white);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.rec-btn-detail:active {
+  background: #f5f7fa;
+  transform: scale(0.97);
+}
+
+.rec-btn-purchase {
+  background: linear-gradient(135deg, #3b7fe8, #2b6dd6);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(59, 127, 232, 0.25);
+}
+
+.rec-btn-purchase:active {
+  background: linear-gradient(135deg, #2A6AD4, #1e5cbf);
+  transform: scale(0.97);
+}
+
+.rec-btn-consult {
+  background: var(--bg-white);
+  color: var(--primary-blue);
+  border: 1px solid var(--primary-blue);
+}
+
+.rec-btn-consult:active {
+  background: rgba(59, 127, 232, 0.06);
+  transform: scale(0.97);
+}
+
+/* ========== 底部方案切换 Tab ========== */
+.rec-tabs {
+  display: flex;
+  border-top: 0.5px solid var(--border);
+  background: #FAFBFD;
+}
+
+.rec-tab {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 10px 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.rec-tab::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--primary-blue);
+  border-radius: 1px;
+  transition: width 0.25s ease;
+}
+
+.rec-tab-active::after {
+  width: 32px;
+}
+
+.rec-tab-active {
+  background: #EBF3FF;
+}
+
+.rec-tab-label {
+  font-size: 10px;
+  color: var(--text-tertiary);
+  font-weight: 500;
+}
+
+.rec-tab-active .rec-tab-label {
+  color: var(--primary-blue);
+}
+
+.rec-tab-name {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  max-width: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rec-tab-active .rec-tab-name {
+  color: var(--primary-blue);
+}
+
+.rec-tab:not(:last-child) {
+  border-right: 0.5px solid var(--border-light);
+}

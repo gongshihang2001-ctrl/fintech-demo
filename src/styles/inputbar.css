@@ -1,0 +1,548 @@
+/* ========== 底部输入栏 · 基于截图 ========== */
+.inputbar-wrapper {
+  position: relative;
+  z-index: 50;
+  background: var(--bg-white);
+  border-top: 0.5px solid var(--border);
+}
+
+/* ========== 意图快捷按钮区域 ========== */
+.intent-shortcuts {
+  display: flex;
+  gap: 8px;
+  padding: 10px 12px 2px;
+}
+
+.intent-shortcut-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 12px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--bg-white);
+  font-size: 12px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.intent-shortcut-btn:hover {
+  border-color: var(--primary-blue);
+  color: var(--primary-blue);
+  background: rgba(59, 127, 232, 0.04);
+}
+
+.intent-shortcut-btn.active {
+  border-color: var(--primary-blue);
+  color: var(--primary-blue);
+  background: rgba(59, 127, 232, 0.08);
+  font-weight: 500;
+}
+
+.intent-shortcut-btn:active {
+  transform: scale(0.96);
+}
+
+.intent-shortcut-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.intent-shortcut-icon {
+  font-size: 13px;
+  line-height: 1;
+}
+
+.intent-shortcut-label {
+  font-size: 12px;
+  line-height: 1;
+}
+
+/* ========== 输入区 ========== */
+.inputbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px 6px;
+}
+
+.input-form {
+  flex: 1;
+  min-width: 0;
+}
+
+/* 输入框外层 wrapper — 支持内嵌意图标识 */
+.input-field-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  background: var(--bg-white);
+  transition: border-color 0.2s;
+  overflow: hidden;
+}
+
+.input-field-wrapper:focus-within {
+  border-color: var(--primary-blue);
+}
+
+/* 意图标识 tag — 输入框内左侧 */
+.intent-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: 10px;
+  padding: 3px 6px 3px 8px;
+  background: rgba(59, 127, 232, 0.1);
+  border-radius: 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  animation: intentTagIn 0.2s ease;
+}
+
+@keyframes intentTagIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.intent-tag-icon {
+  font-size: 11px;
+  line-height: 1;
+}
+
+.intent-tag-text {
+  font-size: 11px;
+  color: var(--primary-blue);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.intent-tag-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  border: none;
+  background: rgba(59, 127, 232, 0.15);
+  border-radius: 50%;
+  font-size: 11px;
+  line-height: 1;
+  color: var(--primary-blue);
+  cursor: pointer;
+  padding: 0;
+  margin-left: 1px;
+  transition: background 0.15s;
+}
+
+.intent-tag-close:hover {
+  background: rgba(59, 127, 232, 0.25);
+}
+
+/* 输入框 - 放在 wrapper 内部 */
+.chat-input {
+  width: 100%;
+  height: 40px;
+  padding: 0 16px;
+  border: none;
+  border-radius: var(--r-xl);
+  background: transparent;
+  font-size: 14px;
+  color: var(--text-primary);
+  outline: none;
+}
+
+.chat-input.has-intent-tag {
+  padding-left: 8px;
+}
+
+.chat-input::placeholder {
+  color: var(--text-quaternary);
+  font-size: 14px;
+}
+
+.chat-input:disabled {
+  opacity: 0.6;
+}
+
+/* 操作按钮 */
+.input-action-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: #666;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.15s;
+  flex-shrink: 0;
+}
+
+.input-action-btn:active {
+  background: rgba(0, 0, 0, 0.04);
+  transform: scale(0.94);
+}
+
+/* 发送按钮 - 蓝色 */
+.send-btn {
+  background: var(--primary-blue);
+  color: var(--text-white);
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(59, 127, 232, 0.3);
+}
+
+.send-btn:active {
+  background: #2A6AD4;
+  transform: scale(0.94);
+}
+
+.send-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.input-actions-right {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/* 底部安全区 */
+.safe-bottom {
+  height: var(--safe-bottom);
+  min-height: 4px;
+}
+
+/* 合规提示用语 */
+.compliance-notice {
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-quaternary);
+  padding: 4px 16px 2px;
+  line-height: 1.4;
+  letter-spacing: 0.2px;
+}
+
+/* ========== 产品选择面板 ========== */
+.product-select-panel {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background: var(--bg-white);
+  border-top: 0.5px solid var(--border);
+  box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.08);
+  border-radius: 16px 16px 0 0;
+  padding: 14px 16px 10px;
+  z-index: 100;
+  animation: panelSlideUp 0.25s ease;
+}
+
+@keyframes panelSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.product-select-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.product-select-panel-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.product-select-panel-close {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  font-size: 14px;
+  color: var(--text-tertiary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+.product-select-panel-close:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* 选择字段 */
+.product-select-field {
+  margin-bottom: 10px;
+}
+
+.product-select-label {
+  display: block;
+  font-size: 11px;
+  color: var(--text-tertiary);
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+/* 下拉 wrapper */
+.product-dropdown-wrapper {
+  position: relative;
+}
+
+/* 下拉触发器 */
+.product-dropdown-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 38px;
+  padding: 0 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #FAFBFC;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 13px;
+}
+
+.product-dropdown-trigger:hover {
+  border-color: var(--primary-blue);
+}
+
+.product-dropdown-trigger.open {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 2px rgba(59, 127, 232, 0.12);
+}
+
+.product-dropdown-trigger .placeholder {
+  color: var(--text-quaternary);
+  font-size: 13px;
+}
+
+.product-dropdown-trigger .has-value {
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.product-dropdown-arrow {
+  font-size: 8px;
+  color: var(--text-tertiary);
+  flex-shrink: 0;
+  margin-left: 8px;
+  transition: transform 0.2s;
+}
+
+/* 下拉菜单 */
+.product-dropdown-menu {
+  position: absolute;
+  bottom: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.1);
+  z-index: 200;
+  overflow: hidden;
+  animation: dropdownFadeIn 0.15s ease;
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 搜索框 */
+.product-dropdown-search {
+  padding: 8px;
+  border-bottom: 0.5px solid var(--border-light);
+}
+
+.product-dropdown-search input {
+  width: 100%;
+  height: 32px;
+  padding: 0 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 12px;
+  color: var(--text-primary);
+  background: #F8F9FC;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.product-dropdown-search input:focus {
+  border-color: var(--primary-blue);
+}
+
+.product-dropdown-search input::placeholder {
+  color: var(--text-quaternary);
+}
+
+/* 下拉列表 */
+.product-dropdown-list {
+  max-height: 220px;
+  overflow-y: auto;
+  padding: 4px 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.product-dropdown-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.product-dropdown-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.product-dropdown-list::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+
+/* 分组标签 */
+.product-dropdown-group {
+  margin-bottom: 2px;
+}
+
+.product-dropdown-group-label {
+  padding: 6px 12px 3px;
+  font-size: 10px;
+  color: var(--text-tertiary);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.product-dropdown-group-icon {
+  font-size: 11px;
+}
+
+/* 下拉选项 */
+.product-dropdown-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 7px 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 12px;
+  text-align: left;
+  transition: background 0.12s;
+}
+
+.product-dropdown-item:hover:not(.disabled) {
+  background: rgba(59, 127, 232, 0.06);
+}
+
+.product-dropdown-item:active:not(.disabled) {
+  background: rgba(59, 127, 232, 0.12);
+}
+
+.product-dropdown-item.disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.product-dropdown-item-name {
+  color: var(--text-primary);
+  font-weight: 500;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.product-dropdown-item-insurer {
+  color: var(--text-quaternary);
+  font-size: 10px;
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
+.product-dropdown-empty {
+  padding: 20px;
+  text-align: center;
+  color: var(--text-quaternary);
+  font-size: 12px;
+}
+
+/* ========== 产品对比特有样式 ========== */
+.product-select-double {
+  /* 两个下拉紧凑排列 */
+}
+
+.product-compare-vs {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--primary-blue);
+  padding: 2px 0 6px;
+  letter-spacing: 1px;
+}
+
+.product-compare-submit {
+  width: 100%;
+  height: 36px;
+  border: none;
+  border-radius: 10px;
+  background: #E8ECF2;
+  color: var(--text-quaternary);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: not-allowed;
+  transition: all 0.25s;
+  margin-top: 4px;
+}
+
+.product-compare-submit.ready {
+  background: var(--primary-blue);
+  color: var(--text-white);
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(59, 127, 232, 0.3);
+}
+
+.product-compare-submit.ready:active {
+  transform: scale(0.98);
+  box-shadow: 0 1px 4px rgba(59, 127, 232, 0.2);
+}

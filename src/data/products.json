@@ -1,0 +1,820 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "lastUpdated": "2026-05-16",
+    "source": "招行代销保险产品库（模拟数据）",
+    "disclaimer": "以下产品信息仅用于Demo演示，实际产品以保险公司官方条款为准"
+  },
+  "categories": {
+    "critical_illness": {
+      "name": "重疾险",
+      "description": "确诊约定重大疾病后一次性赔付保额，用于治疗费用和收入补偿",
+      "icon": "🛡️"
+    },
+    "medical": {
+      "name": "百万医疗险",
+      "description": "报销住院医疗费用，通常有1万免赔额，保额数百万",
+      "icon": "🏥"
+    },
+    "term_life": {
+      "name": "定期寿险",
+      "description": "保障期内身故/全残赔付保额，适合家庭经济支柱",
+      "icon": "❤️"
+    },
+    "accident": {
+      "name": "意外险",
+      "description": "因意外事故导致的身故/伤残/医疗费用赔付",
+      "icon": "⚡"
+    },
+    "endowment_life": {
+      "name": "增额终身寿险",
+      "description": "保额按约定利率递增，兼具保障和储蓄功能，可通过减保灵活取用",
+      "icon": "📈"
+    },
+    "annuity": {
+      "name": "年金险",
+      "description": "约定时间开始定期领取年金，适合养老规划和长期现金流需求",
+      "icon": "🏦"
+    },
+    "child_critical": {
+      "name": "少儿重疾险",
+      "description": "专为未成年人设计的重疾保障，覆盖少儿高发疾病",
+      "icon": "👶"
+    }
+  },
+  "products": [
+    {
+      "id": "ci_001",
+      "name": "招惠保·福享康健2025",
+      "category": "critical_illness",
+      "insurer": "招商信诺人寿",
+      "productLevel": "P2",
+      "tags": ["银行热销", "保障全面"],
+      "ageRange": [18, 55],
+      "coverageTerm": "终身",
+      "paymentTermOptions": [10, 20, 30],
+      "features": {
+        "heavyDiseases": 120,
+        "moderateDiseases": 40,
+        "lightDiseases": 60,
+        "heavyPayRatio": "100%基本保额",
+        "moderatePayRatio": "50%基本保额",
+        "lightPayRatio": "30%基本保额",
+        "waitingPeriod": 180,
+        "specialCoverage": ["恶性肿瘤-重度额外赔付80%", "特定心脑血管疾病额外赔付80%", "60岁前重疾额外赔付60%"]
+      },
+      "premiumTable": {
+        "male": {
+          "25": {"300000": 3420, "500000": 5700},
+          "30": {"300000": 4080, "500000": 6800},
+          "35": {"300000": 5160, "500000": 8600},
+          "40": {"300000": 6720, "500000": 11200}
+        },
+        "female": {
+          "25": {"300000": 2880, "500000": 4800},
+          "30": {"300000": 3480, "500000": 5800},
+          "35": {"300000": 4440, "500000": 7400},
+          "40": {"300000": 5880, "500000": 9800}
+        }
+      },
+      "premiumNote": "以30岁男性、50万保额、30年缴为例",
+      "highlights": ["招商信诺承保，招行代销品质优选", "120种重疾+40种中症+60种轻症", "60岁前重疾额外赔60%", "癌症和心脑血管额外赔付"],
+      "limitations": ["等待期180天", "终身保障保费相对较高"],
+      "healthNoticeLevel": "中等",
+      "healthNoticeKeywords": ["甲状腺结节", "乳腺结节", "高血压", "糖尿病", "肝功能异常"]
+    },
+    {
+      "id": "ci_002",
+      "name": "超级玛丽15号重疾险",
+      "category": "critical_illness",
+      "insurer": "君龙人寿",
+      "productLevel": "P2",
+      "tags": ["网红爆款", "高性价比"],
+      "ageRange": [28, 55],
+      "coverageTerm": "终身",
+      "paymentTermOptions": [20, 30],
+      "features": {
+        "heavyDiseases": 120,
+        "moderateDiseases": 25,
+        "lightDiseases": 50,
+        "heavyPayRatio": "100%基本保额",
+        "moderatePayRatio": "60%基本保额",
+        "lightPayRatio": "30%基本保额",
+        "waitingPeriod": 180,
+        "specialCoverage": ["恶性肿瘤-重度额外赔100%", "癌症拓展金（原位癌等轻度赔后再确诊重度再赔）", "特定心脑血管疾病额外赔150%", "60岁前首次重疾额外赔80%"]
+      },
+      "premiumTable": {
+        "male": {
+          "25": {"300000": 3120, "500000": 5200},
+          "30": {"300000": 3780, "500000": 6300},
+          "35": {"300000": 4800, "500000": 8000},
+          "40": {"300000": 6300, "500000": 10500}
+        },
+        "female": {
+          "25": {"300000": 2640, "500000": 4400},
+          "30": {"300000": 3240, "500000": 5400},
+          "35": {"300000": 4080, "500000": 6800},
+          "40": {"300000": 5400, "500000": 9000}
+        }
+      },
+      "premiumNote": "以30岁男性、50万保额、30年缴为例",
+      "highlights": ["癌症保障极强：额外赔100%+癌症拓展金", "心脑血管额外赔150%行业顶配", "60岁前重疾额外赔80%", "甲状腺/乳腺/肺结节专项保障好"],
+      "limitations": ["投保年龄28岁起", "等待期180天"],
+      "healthNoticeLevel": "较宽松",
+      "healthNoticeKeywords": ["甲状腺结节TI-RADS≤3级可投", "乳腺结节BI-RADS≤3级可投", "BMI限制"]
+    },
+    {
+      "id": "ci_003",
+      "name": "达尔文12号重疾险",
+      "category": "critical_illness",
+      "insurer": "瑞华健康保险",
+      "productLevel": "P2",
+      "tags": ["经典IP", "家庭关爱"],
+      "ageRange": [28, 55],
+      "coverageTerm": "终身",
+      "paymentTermOptions": [20, 30, 35],
+      "features": {
+        "heavyDiseases": 120,
+        "moderateDiseases": 25,
+        "lightDiseases": 50,
+        "heavyPayRatio": "100%基本保额",
+        "moderatePayRatio": "60%基本保额",
+        "lightPayRatio": "30%基本保额",
+        "waitingPeriod": 180,
+        "specialCoverage": ["60岁前首次重疾额外赔100%", "顶梁柱关爱金（癌症确诊时子女未满18或父母超60可额外赔30%）", "特定心脑血管额外赔120%", "ICU住院津贴"]
+      },
+      "premiumTable": {
+        "male": {
+          "25": {"300000": 3060, "500000": 5100},
+          "30": {"300000": 3720, "500000": 6200},
+          "35": {"300000": 4740, "500000": 7900},
+          "40": {"300000": 6180, "500000": 10300}
+        },
+        "female": {
+          "25": {"300000": 2580, "500000": 4300},
+          "30": {"300000": 3180, "500000": 5300},
+          "35": {"300000": 4020, "500000": 6700},
+          "40": {"300000": 5340, "500000": 8900}
+        }
+      },
+      "premiumNote": "以30岁男性、50万保额、30年缴为例",
+      "highlights": ["60岁前重疾额外赔100%，行业最高档", "顶梁柱关爱金设计温暖", "支持最长35年缴费，降低年缴压力", "甲状腺/乳腺/肺结节专项优化"],
+      "limitations": ["投保年龄28岁起", "部分城市限制"],
+      "healthNoticeLevel": "较宽松",
+      "healthNoticeKeywords": ["甲状腺结节", "乳腺结节", "肺结节"]
+    },
+    {
+      "id": "ci_004",
+      "name": "哪吒2号重疾险",
+      "category": "critical_illness",
+      "insurer": "海保人寿",
+      "productLevel": "P2",
+      "tags": ["高性价比", "投保宽松"],
+      "ageRange": [18, 55],
+      "coverageTerm": "终身/至70岁",
+      "paymentTermOptions": [20, 30],
+      "features": {
+        "heavyDiseases": 120,
+        "moderateDiseases": 25,
+        "lightDiseases": 50,
+        "heavyPayRatio": "100%基本保额",
+        "moderatePayRatio": "60%基本保额",
+        "lightPayRatio": "30%基本保额",
+        "waitingPeriod": 180,
+        "specialCoverage": ["60岁前首次重疾额外赔70%", "恶性肿瘤-重度额外赔100%", "特定心脑血管额外赔120%", "意外身故/全残额外赔100%保额"]
+      },
+      "premiumTable": {
+        "male": {
+          "25": {"300000": 2880, "500000": 4800},
+          "30": {"300000": 3540, "500000": 5900},
+          "35": {"300000": 4500, "500000": 7500},
+          "40": {"300000": 5940, "500000": 9900}
+        },
+        "female": {
+          "25": {"300000": 2460, "500000": 4100},
+          "30": {"300000": 3000, "500000": 5000},
+          "35": {"300000": 3840, "500000": 6400},
+          "40": {"300000": 5100, "500000": 8500}
+        }
+      },
+      "premiumNote": "以30岁男性、50万保额、30年缴、终身保障为例",
+      "highlights": ["价格最低档，预算有限首选", "意外身故额外赔100%，相当于送一份寿险", "支持保至70岁选项，保费更低", "健康告知相对宽松"],
+      "limitations": ["品牌知名度略低", "60岁前重疾额外赔比例相对低"],
+      "healthNoticeLevel": "宽松",
+      "healthNoticeKeywords": ["甲状腺结节", "乳腺结节", "肺结节", "BMI"]
+    },
+    {
+      "id": "med_001",
+      "name": "招惠保·百万医疗险2025",
+      "category": "medical",
+      "insurer": "招商信诺人寿",
+      "productLevel": "P1",
+      "tags": ["银行品质", "0免赔版可选"],
+      "ageRange": [0, 65],
+      "coverageTerm": "1年（保证续保20年）",
+      "paymentTermOptions": [1],
+      "features": {
+        "generalMedicalLimit": 4000000,
+        "criticalMedicalLimit": 4000000,
+        "deductible": 10000,
+        "reimbursementRatio": "100%（有社保）/ 60%（无社保）",
+        "renewalGuarantee": "20年保证续保",
+        "outpatientSurgery": true,
+        "specialDrug": true,
+        "protonTherapy": true,
+        "greenChannel": true,
+        "advancePayment": true
+      },
+      "premiumTable": {
+        "0-5": 779,
+        "6-10": 478,
+        "11-15": 258,
+        "16-20": 178,
+        "21-25": 198,
+        "26-30": 258,
+        "31-35": 348,
+        "36-40": 498,
+        "41-45": 698,
+        "46-50": 998,
+        "51-55": 1498,
+        "56-60": 1998
+      },
+      "premiumNote": "有社保价格，以30岁为例约258元/年",
+      "highlights": ["招商信诺承保，20年保证续保", "400万保额覆盖住院+特殊门诊", "院外特药保障不限目录", "可选0免赔版本"],
+      "limitations": ["标准版1万免赔额", "理赔后续保保费可能调整"],
+      "healthNoticeLevel": "中等",
+      "healthNoticeKeywords": ["甲状腺结节", "乳腺结节", "高血压", "糖尿病"]
+    },
+    {
+      "id": "med_002",
+      "name": "蓝医保·好医好药Pro版",
+      "category": "medical",
+      "insurer": "太平洋健康保险",
+      "productLevel": "P1",
+      "tags": ["保证续保20年", "0免赔可选"],
+      "ageRange": [0, 60],
+      "coverageTerm": "1年（保证续保20年）",
+      "paymentTermOptions": [1],
+      "features": {
+        "generalMedicalLimit": 4000000,
+        "criticalMedicalLimit": 4000000,
+        "deductible": 10000,
+        "reimbursementRatio": "100%（有社保）",
+        "renewalGuarantee": "20年保证续保",
+        "outpatientSurgery": true,
+        "specialDrug": true,
+        "protonTherapy": true,
+        "greenChannel": true,
+        "advancePayment": true,
+        "familyShareDeductible": true
+      },
+      "premiumTable": {
+        "0-5": 682,
+        "6-10": 406,
+        "11-15": 206,
+        "16-20": 151,
+        "21-25": 168,
+        "26-30": 226,
+        "31-35": 305,
+        "36-40": 438,
+        "41-45": 618,
+        "46-50": 879,
+        "51-55": 1328,
+        "56-60": 1778
+      },
+      "premiumNote": "有社保价格，以30岁为例约226元/年",
+      "highlights": ["太平洋健康承保，大品牌保障", "20年保证续保", "支持家庭共享免赔额", "可选0免赔+私立医院"],
+      "limitations": ["0免赔版保费较贵", "部分地区有限制"],
+      "healthNoticeLevel": "中等",
+      "healthNoticeKeywords": ["甲状腺结节", "高血压", "糖尿病", "BMI"]
+    },
+    {
+      "id": "med_003",
+      "name": "尊享e生2026",
+      "category": "medical",
+      "insurer": "众安保险",
+      "productLevel": "P1",
+      "tags": ["国民医疗险", "保障全面"],
+      "ageRange": [0, 65],
+      "coverageTerm": "1年",
+      "paymentTermOptions": [1],
+      "features": {
+        "generalMedicalLimit": 6000000,
+        "criticalMedicalLimit": 6000000,
+        "deductible": 10000,
+        "reimbursementRatio": "100%（有社保）/ 60%（无社保）",
+        "renewalGuarantee": "无保证续保，但承诺不因健康变化拒绝续保",
+        "outpatientSurgery": true,
+        "specialDrug": true,
+        "protonTherapy": true,
+        "greenChannel": true,
+        "advancePayment": true,
+        "familyShareDeductible": true
+      },
+      "premiumTable": {
+        "0-5": 716,
+        "6-10": 426,
+        "11-15": 218,
+        "16-20": 158,
+        "21-25": 176,
+        "26-30": 236,
+        "31-35": 316,
+        "36-40": 456,
+        "41-45": 636,
+        "46-50": 916,
+        "51-55": 1386,
+        "56-60": 1856
+      },
+      "premiumNote": "有社保价格，以30岁为例约236元/年",
+      "highlights": ["600万超高保额", "家庭共享免赔额", "院外特药0免赔", "增值服务丰富（质子重离子、赴日医疗等）"],
+      "limitations": ["无保证续保", "线上品牌，部分用户顾虑理赔"],
+      "healthNoticeLevel": "中等偏严",
+      "healthNoticeKeywords": ["甲状腺结节", "乳腺结节", "肺结节", "高血压", "糖尿病"]
+    },
+    {
+      "id": "med_004",
+      "name": "好医保·旗舰版2025",
+      "category": "medical",
+      "insurer": "人保健康",
+      "productLevel": "P1",
+      "tags": ["人保承保", "性价比高"],
+      "ageRange": [0, 60],
+      "coverageTerm": "1年（保证续保20年）",
+      "paymentTermOptions": [1],
+      "features": {
+        "generalMedicalLimit": 4000000,
+        "criticalMedicalLimit": 4000000,
+        "deductible": 10000,
+        "reimbursementRatio": "100%（有社保）/ 60%（无社保）",
+        "renewalGuarantee": "20年保证续保",
+        "outpatientSurgery": true,
+        "specialDrug": true,
+        "protonTherapy": true,
+        "greenChannel": true,
+        "advancePayment": true
+      },
+      "premiumTable": {
+        "0-5": 658,
+        "6-10": 398,
+        "11-15": 198,
+        "16-20": 148,
+        "21-25": 158,
+        "26-30": 218,
+        "31-35": 298,
+        "36-40": 428,
+        "41-45": 598,
+        "46-50": 868,
+        "51-55": 1298,
+        "56-60": 1738
+      },
+      "premiumNote": "有社保价格，以30岁为例约218元/年",
+      "highlights": ["人保健康承保，理赔口碑好", "20年保证续保", "保费价格有竞争力", "外购特药0免赔"],
+      "limitations": ["健康告知稍严格", "增值服务相对少"],
+      "healthNoticeLevel": "中等偏严",
+      "healthNoticeKeywords": ["甲状腺结节", "高血压", "糖尿病"]
+    },
+    {
+      "id": "tl_001",
+      "name": "华贵大麦2026定期寿险",
+      "category": "term_life",
+      "insurer": "华贵人寿",
+      "productLevel": "P2",
+      "tags": ["定寿之王", "高保额"],
+      "ageRange": [18, 60],
+      "coverageTerm": "至60岁/至70岁/至80岁",
+      "paymentTermOptions": [10, 20, 30],
+      "features": {
+        "maxCoverage": 4000000,
+        "coverageType": "身故或全残赔付保额",
+        "exclusions": 3,
+        "waitingPeriod": 90,
+        "convertible": true,
+        "specialFeatures": ["免责条款仅3条（行业最少）", "支持定转终（转为终身寿）", "最高400万保额"]
+      },
+      "premiumTable": {
+        "male": {
+          "25": {"1000000": 530, "2000000": 1060},
+          "30": {"1000000": 650, "2000000": 1300},
+          "35": {"1000000": 850, "2000000": 1700},
+          "40": {"1000000": 1200, "2000000": 2400}
+        },
+        "female": {
+          "25": {"1000000": 285, "2000000": 570},
+          "30": {"1000000": 350, "2000000": 700},
+          "35": {"1000000": 455, "2000000": 910},
+          "40": {"1000000": 640, "2000000": 1280}
+        }
+      },
+      "premiumNote": "以30岁男性、100万保额、保至60岁、30年缴为例",
+      "highlights": ["免责仅3条，行业最少", "最高可买400万保额", "价格极具竞争力", "支持定转终功能"],
+      "limitations": ["纯定期保障，到期无返还", "部分城市保额有限制"],
+      "healthNoticeLevel": "宽松",
+      "healthNoticeKeywords": ["BMI", "高血压", "糖尿病"]
+    },
+    {
+      "id": "tl_002",
+      "name": "定海柱7号定期寿险",
+      "category": "term_life",
+      "insurer": "国富人寿",
+      "productLevel": "P2",
+      "tags": ["价格极低", "基础保障"],
+      "ageRange": [18, 55],
+      "coverageTerm": "至60岁/至70岁",
+      "paymentTermOptions": [10, 20, 30],
+      "features": {
+        "maxCoverage": 3500000,
+        "coverageType": "身故或全残赔付保额",
+        "exclusions": 4,
+        "waitingPeriod": 90,
+        "convertible": false,
+        "specialFeatures": ["价格地板价", "最长缴费30年"]
+      },
+      "premiumTable": {
+        "male": {
+          "25": {"1000000": 490, "2000000": 980},
+          "30": {"1000000": 610, "2000000": 1220},
+          "35": {"1000000": 800, "2000000": 1600},
+          "40": {"1000000": 1130, "2000000": 2260}
+        },
+        "female": {
+          "25": {"1000000": 262, "2000000": 524},
+          "30": {"1000000": 328, "2000000": 656},
+          "35": {"1000000": 428, "2000000": 856},
+          "40": {"1000000": 602, "2000000": 1204}
+        }
+      },
+      "premiumNote": "以30岁男性、100万保额、保至60岁、30年缴为例",
+      "highlights": ["保费价格几乎最低", "基础保障扎实", "等待期仅90天"],
+      "limitations": ["免责条款4条", "不支持定转终", "品牌知名度一般"],
+      "healthNoticeLevel": "宽松",
+      "healthNoticeKeywords": ["BMI", "高血压"]
+    },
+    {
+      "id": "tl_003",
+      "name": "招商仁和擎天柱11号定期寿险",
+      "category": "term_life",
+      "insurer": "招商仁和人寿",
+      "productLevel": "P2",
+      "tags": ["招商系", "一生中意版"],
+      "ageRange": [18, 60],
+      "coverageTerm": "至60岁/至70岁/至80岁",
+      "paymentTermOptions": [10, 20, 30],
+      "features": {
+        "maxCoverage": 3500000,
+        "coverageType": "身故或全残赔付保额",
+        "exclusions": 3,
+        "waitingPeriod": 90,
+        "convertible": true,
+        "specialFeatures": ["招商仁和承保，招行系品牌", "免责仅3条", "支持定转终"]
+      },
+      "premiumTable": {
+        "male": {
+          "25": {"1000000": 540, "2000000": 1080},
+          "30": {"1000000": 660, "2000000": 1320},
+          "35": {"1000000": 865, "2000000": 1730},
+          "40": {"1000000": 1220, "2000000": 2440}
+        },
+        "female": {
+          "25": {"1000000": 290, "2000000": 580},
+          "30": {"1000000": 355, "2000000": 710},
+          "35": {"1000000": 465, "2000000": 930},
+          "40": {"1000000": 655, "2000000": 1310}
+        }
+      },
+      "premiumNote": "以30岁男性、100万保额、保至60岁、30年缴为例",
+      "highlights": ["招商仁和承保，招行系亲属品牌", "免责仅3条", "支持定转终", "一生中意版保障升级"],
+      "limitations": ["保费略高于定海柱", "部分地区限制"],
+      "healthNoticeLevel": "宽松",
+      "healthNoticeKeywords": ["BMI", "高血压", "糖尿病"]
+    },
+    {
+      "id": "acc_001",
+      "name": "小蜜蜂6号综合意外险·尊享版",
+      "category": "accident",
+      "insurer": "太平洋财产保险",
+      "productLevel": "P1",
+      "tags": ["年度爆款", "保障全面"],
+      "ageRange": [18, 65],
+      "coverageTerm": "1年",
+      "paymentTermOptions": [1],
+      "features": {
+        "accidentalDeath": 1000000,
+        "accidentalDisability": "按伤残等级比例赔付，最高100万",
+        "accidentalMedical": 50000,
+        "medicalDeductible": 0,
+        "medicalReimbursement": "100%（不限社保）",
+        "hospitalizationAllowance": "200元/天",
+        "transportAccident": "额外赔付",
+        "catNatDisaster": "额外赔付"
+      },
+      "premiumTable": {
+        "standard": 285
+      },
+      "premiumNote": "100万保额，年缴285元",
+      "highlights": ["太平洋财险承保，大品牌", "意外医疗0免赔、不限社保", "含住院津贴200元/天", "交通意外额外赔付"],
+      "limitations": ["1-3类职业限制", "高风险运动不保"],
+      "healthNoticeLevel": "极宽松",
+      "healthNoticeKeywords": []
+    },
+    {
+      "id": "acc_002",
+      "name": "大护甲7号综合意外险·至尊版",
+      "category": "accident",
+      "insurer": "人保财险",
+      "productLevel": "P1",
+      "tags": ["人保承保", "价格实惠"],
+      "ageRange": [18, 65],
+      "coverageTerm": "1年",
+      "paymentTermOptions": [1],
+      "features": {
+        "accidentalDeath": 1000000,
+        "accidentalDisability": "按伤残等级比例赔付，最高100万",
+        "accidentalMedical": 50000,
+        "medicalDeductible": 100,
+        "medicalReimbursement": "100%（社保范围内）",
+        "hospitalizationAllowance": "150元/天",
+        "transportAccident": "额外赔付",
+        "catNatDisaster": "额外赔付"
+      },
+      "premiumTable": {
+        "standard": 275
+      },
+      "premiumNote": "100万保额，年缴275元",
+      "highlights": ["人保财险承保，理赔有保障", "保费价格最低档", "特定交通意外额外赔付", "猝死保障50万"],
+      "limitations": ["意外医疗有100元免赔额", "限社保范围", "1-3类职业"],
+      "healthNoticeLevel": "极宽松",
+      "healthNoticeKeywords": []
+    },
+    {
+      "id": "acc_003",
+      "name": "招惠保·综合意外险A款",
+      "category": "accident",
+      "insurer": "招商信诺人寿",
+      "productLevel": "P1",
+      "tags": ["银行专属", "品质之选"],
+      "ageRange": [18, 65],
+      "coverageTerm": "1年",
+      "paymentTermOptions": [1],
+      "features": {
+        "accidentalDeath": 1000000,
+        "accidentalDisability": "按伤残等级比例赔付，最高100万",
+        "accidentalMedical": 30000,
+        "medicalDeductible": 100,
+        "medicalReimbursement": "90%（社保范围内）",
+        "hospitalizationAllowance": "100元/天",
+        "transportAccident": "额外赔付"
+      },
+      "premiumTable": {
+        "standard": 198
+      },
+      "premiumNote": "100万保额，年缴198元",
+      "highlights": ["招商信诺承保，银行品牌信赖", "保费极具性价比", "特定交通意外额外赔付"],
+      "limitations": ["意外医疗保额较低（3万）", "报销比例90%", "限社保范围"],
+      "healthNoticeLevel": "极宽松",
+      "healthNoticeKeywords": []
+    },
+    {
+      "id": "el_001",
+      "name": "招盈金生·增额终身寿险",
+      "category": "endowment_life",
+      "insurer": "招商信诺人寿",
+      "productLevel": "P2",
+      "tags": ["银行热销", "稳健储蓄"],
+      "ageRange": [0, 70],
+      "coverageTerm": "终身",
+      "paymentTermOptions": [3, 5, 10],
+      "features": {
+        "guaranteedRate": "2.3%（复利）",
+        "cashValueGrowth": "保额年增长2.3%",
+        "partialSurrender": "生效5年后可申请减保",
+        "partialSurrenderLimit": "每年不超过已缴保费的20%",
+        "deathBenefit": "现金价值与已交保费取大值"
+      },
+      "premiumTable": {
+        "example_30male_5year": {
+          "annualPremium": 100000,
+          "year5CashValue": 512000,
+          "year10CashValue": 575000,
+          "year20CashValue": 726000,
+          "year30CashValue": 916000,
+          "breakEvenYear": 5
+        }
+      },
+      "premiumNote": "以30岁男性、年缴10万、5年缴为例",
+      "highlights": ["招商信诺承保，银行代销品质优选", "锁定2.3%终身复利增长", "5年后可灵活减保取用", "适合教育金、养老金规划"],
+      "limitations": ["前期退保有损失", "收益确定性高但增速不及分红型", "5年内不宜减保"],
+      "healthNoticeLevel": "极宽松",
+      "healthNoticeKeywords": []
+    },
+    {
+      "id": "el_002",
+      "name": "星盈家朱雀版·增额终身寿险",
+      "category": "endowment_life",
+      "insurer": "复星保德信人寿",
+      "productLevel": "P2",
+      "tags": ["高收益", "回本快"],
+      "ageRange": [0, 70],
+      "coverageTerm": "终身",
+      "paymentTermOptions": [3, 5, 10],
+      "features": {
+        "guaranteedRate": "2.4%（复利）",
+        "cashValueGrowth": "保额年增长2.4%",
+        "partialSurrender": "生效5年后可申请减保",
+        "partialSurrenderLimit": "每年不超过已缴保费的20%",
+        "deathBenefit": "现金价值与已交保费取大值"
+      },
+      "premiumTable": {
+        "example_30male_5year": {
+          "annualPremium": 100000,
+          "year5CashValue": 518000,
+          "year10CashValue": 590000,
+          "year20CashValue": 758000,
+          "year30CashValue": 973000,
+          "breakEvenYear": 5
+        }
+      },
+      "premiumNote": "以30岁男性、年缴10万、5年缴为例",
+      "highlights": ["收益表现优秀，长期IRR约2.4%", "趸交/3年交第3年即可回本", "减保规则宽松", "适合中长期财富管理"],
+      "limitations": ["非银行亲属品牌", "前期退保有损失"],
+      "healthNoticeLevel": "极宽松",
+      "healthNoticeKeywords": []
+    },
+    {
+      "id": "an_001",
+      "name": "招盈瑞享·分红型年金险",
+      "category": "annuity",
+      "insurer": "招商信诺人寿",
+      "productLevel": "P3",
+      "tags": ["分红型", "银行主力"],
+      "ageRange": [18, 65],
+      "coverageTerm": "终身",
+      "paymentTermOptions": [3, 5, 10],
+      "features": {
+        "guaranteedRate": "2.0%（保证部分）",
+        "dividendRate": "中档演示3.5%（非保证）",
+        "annuityStartAge": 60,
+        "annuityType": "终身领取",
+        "dividendDistribution": "增额红利"
+      },
+      "premiumTable": {
+        "example_35male_10year": {
+          "annualPremium": 50000,
+          "guaranteedAnnuity": "60岁起每年领取约32000元",
+          "midAnnuity": "60岁起每年领取约48000元（中档演示）",
+          "totalGuaranteed": "保证领取至80岁约640000元",
+          "totalMid": "中档领取至80岁约960000元"
+        }
+      },
+      "premiumNote": "以35岁男性、年缴5万、10年缴为例",
+      "highlights": ["分红型设计，收益有上浮空间", "终身领取，活多久领多久", "招商信诺承保，银行品牌", "适合养老补充"],
+      "limitations": ["分红非保证", "流动性差，领取前退保有损失", "需长期持有"],
+      "healthNoticeLevel": "极宽松",
+      "healthNoticeKeywords": []
+    },
+    {
+      "id": "an_002",
+      "name": "自在人生A款·养老年金险",
+      "category": "annuity",
+      "insurer": "招商仁和人寿",
+      "productLevel": "P2",
+      "tags": ["养老专属", "个人养老金"],
+      "ageRange": [18, 55],
+      "coverageTerm": "终身",
+      "paymentTermOptions": [10, 15, 20],
+      "features": {
+        "guaranteedRate": "2.0%",
+        "annuityStartAge": "55/60/65（可选）",
+        "annuityType": "终身领取",
+        "guaranteedReceivePeriod": "保证领取20年",
+        "personalPensionAccount": true
+      },
+      "premiumTable": {
+        "example_35male_20year": {
+          "annualPremium": 12000,
+          "annuityAt60": "60岁起每年领取约16800元",
+          "totalPaid": 240000,
+          "breakEvenAge": "约74岁回本"
+        }
+      },
+      "premiumNote": "以35岁男性、年缴1.2万、20年缴、60岁领取为例",
+      "highlights": ["招商仁和承保，招行系品牌", "支持个人养老金账户投保", "保证领取20年，降低长寿风险", "终身领取，越长寿越划算"],
+      "limitations": ["回本周期较长", "前期退保损失大", "收益确定性但不高"],
+      "healthNoticeLevel": "极宽松",
+      "healthNoticeKeywords": []
+    },
+    {
+      "id": "cc_001",
+      "name": "招惠保·少儿守护2025重疾险",
+      "category": "child_critical",
+      "insurer": "招商信诺人寿",
+      "productLevel": "P2",
+      "tags": ["少儿专属", "银行品质"],
+      "ageRange": [0, 17],
+      "coverageTerm": "至30岁/终身",
+      "paymentTermOptions": [10, 20],
+      "features": {
+        "heavyDiseases": 120,
+        "moderateDiseases": 40,
+        "lightDiseases": 60,
+        "childSpecificDiseases": 20,
+        "childSpecificPayRatio": "额外赔付100%基本保额",
+        "heavyPayRatio": "100%基本保额",
+        "waitingPeriod": 180,
+        "specialCoverage": ["20种少儿特定疾病额外赔100%", "罕见病保障", "18岁前重疾额外赔50%"]
+      },
+      "premiumTable": {
+        "male": {
+          "0": {"300000": 540, "500000": 900},
+          "3": {"300000": 576, "500000": 960},
+          "6": {"300000": 612, "500000": 1020},
+          "10": {"300000": 660, "500000": 1100}
+        },
+        "female": {
+          "0": {"300000": 486, "500000": 810},
+          "3": {"300000": 516, "500000": 860},
+          "6": {"300000": 552, "500000": 920},
+          "10": {"300000": 594, "500000": 990}
+        }
+      },
+      "premiumNote": "以3岁男孩、50万保额、20年缴、保终身为例",
+      "highlights": ["20种少儿特定重疾额外赔100%", "覆盖白血病、川崎病等儿童高发疾病", "保费极低，50万保额不到1000元/年", "招商信诺承保"],
+      "limitations": ["等待期180天", "少儿意外不在重疾险范围内"],
+      "healthNoticeLevel": "中等",
+      "healthNoticeKeywords": ["先天性疾病", "早产", "出生体重"]
+    },
+    {
+      "id": "cc_002",
+      "name": "大黄蜂16号少儿重疾险",
+      "category": "child_critical",
+      "insurer": "北京人寿",
+      "productLevel": "P2",
+      "tags": ["少儿爆款", "保障全面"],
+      "ageRange": [0, 17],
+      "coverageTerm": "至30岁/终身",
+      "paymentTermOptions": [10, 20, 30],
+      "features": {
+        "heavyDiseases": 120,
+        "moderateDiseases": 25,
+        "lightDiseases": 50,
+        "childSpecificDiseases": 22,
+        "childSpecificPayRatio": "额外赔付120%基本保额",
+        "heavyPayRatio": "100%基本保额",
+        "waitingPeriod": 180,
+        "specialCoverage": ["22种少儿特定疾病额外赔120%", "少儿罕见病额外赔200%", "18岁前重疾额外赔100%"]
+      },
+      "premiumTable": {
+        "male": {
+          "0": {"300000": 510, "500000": 850},
+          "3": {"300000": 540, "500000": 900},
+          "6": {"300000": 576, "500000": 960},
+          "10": {"300000": 618, "500000": 1030}
+        },
+        "female": {
+          "0": {"300000": 456, "500000": 760},
+          "3": {"300000": 486, "500000": 810},
+          "6": {"300000": 516, "500000": 860},
+          "10": {"300000": 558, "500000": 930}
+        }
+      },
+      "premiumNote": "以3岁男孩、50万保额、20年缴、保终身为例",
+      "highlights": ["22种少儿特定疾病额外赔120%", "少儿罕见病额外赔200%，行业最高", "18岁前重疾额外赔100%", "可选保至30岁版本更便宜"],
+      "limitations": ["品牌知名度一般", "部分城市限制"],
+      "healthNoticeLevel": "中等",
+      "healthNoticeKeywords": ["先天性疾病", "早产"]
+    },
+    {
+      "id": "el_003",
+      "name": "传世瑞盈B·分红型终身寿险",
+      "category": "endowment_life",
+      "insurer": "中英人寿",
+      "productLevel": "P3",
+      "tags": ["分红型", "高收益潜力"],
+      "ageRange": [0, 70],
+      "coverageTerm": "终身",
+      "paymentTermOptions": [3, 5, 10],
+      "features": {
+        "guaranteedRate": "2.0%（保证部分）",
+        "dividendRate": "中档演示3.5%（非保证）",
+        "cashValueGrowth": "保证+分红双增长",
+        "partialSurrender": "生效5年后可申请减保",
+        "deathBenefit": "现金价值与已交保费取大值"
+      },
+      "premiumTable": {
+        "example_30male_5year": {
+          "annualPremium": 100000,
+          "year5CashValue_guaranteed": 498000,
+          "year5CashValue_mid": 515000,
+          "year10CashValue_mid": 618000,
+          "year20CashValue_mid": 832000,
+          "year30CashValue_mid": 1120000,
+          "breakEvenYear": "5年（中档）"
+        }
+      },
+      "premiumNote": "以30岁男性、年缴10万、5年缴为例",
+      "highlights": ["分红水平行业领先", "保证收益+浮动分红双引擎", "长期持有收益可观", "灵活减保取用"],
+      "limitations": ["分红非保证，实际可能低于中档", "前期退保有损失", "需理解分红机制"],
+      "healthNoticeLevel": "极宽松",
+      "healthNoticeKeywords": []
+    }
+  ]
+}

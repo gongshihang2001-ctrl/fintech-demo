@@ -1,0 +1,124 @@
+/* ========== 全局样式 · 招行App保险AI对话助手 ========== */
+
+:root {
+  /* 品牌色系 - 基于截图 */
+  --primary-blue: #3B7FE8;
+  --primary-blue-light: #5B9BF0;
+  --link-blue: #3B7FE8;
+
+  /* AI头像渐变色 */
+  --avatar-gradient: linear-gradient(135deg, #A8C8FF 0%, #D4B0FF 40%, #FFB8C6 70%, #FFD4A8 100%);
+
+  /* 功能色 */
+  --orange: #FF8C00;
+  --orange-bg: rgba(255, 140, 0, 0.1);
+  --green: #34C759;
+  --red: #E23C3E;
+
+  /* 背景色 - 截图中的浅灰白 */
+  --bg-page: #F5F6FA;
+  --bg-white: #FFFFFF;
+  --bg-chat: #F5F6FA;
+
+  /* AI气泡特殊背景 - 截图中带淡蓝紫渐变 */
+  --bubble-ai-bg: linear-gradient(135deg, rgba(200, 220, 255, 0.15) 0%, rgba(220, 200, 255, 0.08) 100%);
+
+  /* 文字色 */
+  --text-primary: #1A1A1A;
+  --text-secondary: #3D3D3D;
+  --text-tertiary: #8C8C8C;
+  --text-quaternary: #BFBFBF;
+  --text-white: #FFFFFF;
+
+  /* 招行品牌红 */
+  --cmb-red: #DC2828;
+
+  /* 边框 */
+  --border: #E8E8E8;
+  --border-light: #F0F0F0;
+  --border-medium: #D9D9D9;
+  --divider: rgba(0, 0, 0, 0.05);
+
+  /* 输入框背景 */
+  --bg-input: #F5F5F5;
+
+  /* 间距 */
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+
+  /* 圆角 */
+  --r-xs: 4px;
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --r-xl: 20px;
+  --r-full: 999px;
+
+  /* 阴影 */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-float: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'SF Pro Text', 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  color: var(--text-primary);
+  background: #1A1A2E;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 隐藏滚动条 */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* 动画 */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes typingBounce {
+  0%, 60%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-4px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
