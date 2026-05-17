@@ -17,10 +17,10 @@ function App() {
   const [showSurvey, setShowSurvey] = useState(false);
   // 问卷是否已完成
   const [surveyCompleted, setSurveyCompleted] = useState(false);
-  // API配置 — 走Vercel服务端代理，Key无需前端传入
+  // API配置 — 直接调用DeepSeek API
   const [apiConfig, setApiConfig] = useState({
-    baseUrl: '/api',
-    apiKey: '',
+    baseUrl: 'https://api.deepseek.com',
+    apiKey: 'sk-ccd7985ca2364777af037fed80b07b53',
     model: 'deepseek-chat'
   });
   // 用户画像（初始为空，完成问卷后填充）
